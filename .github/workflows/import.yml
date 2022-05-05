@@ -26,6 +26,8 @@ jobs:
           node-version: 14.x
           cache: npm
       - run: npm install
+      - run: ls -la /home/runner
+      - run: ls -la /home/runner/*
       - run: ARTICLES_DIRECTORY_PATHS=./output npm run export
       - uses: peaceiris/actions-gh-pages@v3
         with:
