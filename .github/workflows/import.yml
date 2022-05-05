@@ -26,7 +26,7 @@ jobs:
           node-version: 14.x
           cache: npm
       - run: npm install
-      - run: npm run export
+      - run: ARTICLES_DIRECTORY_PATHS=./output npm run export
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
